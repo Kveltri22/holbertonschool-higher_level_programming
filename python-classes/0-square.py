@@ -1,7 +1,7 @@
-    #!/usr/bin/python3
-    """This Module creates a new, empty class called Square."""
+ #!/usr/bin/python3
+"""This Module creates a new, empty class called Square."""
 
 
-   class Square:
+class Square:
     """Empty Class"""
-     pass
+    pass
