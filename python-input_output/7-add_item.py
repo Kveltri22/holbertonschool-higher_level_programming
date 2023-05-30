@@ -1,18 +1,18 @@
 #!/usr/bin/python3
-"""add an item"""
-from sys import argv
+""" save """
+import sys
 import json
-import os
-
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
-if os.path.isfile("add_item.json"):
-    my_list = load_from_json_file("add_item.json")
-else:
-    my_list = []
-
-for arg in range(1, len(argv)):
-    my_list.append(argv[arg])
-save_to_json_file(my_list, "add_item.json")
+if __name__ == '__main__':
+    args = sys.argv
+    filename = "add_item.json"
+    with open(filename, 'a+', encoding="utf-8") as f:
+        try:
+            my_list = load_from_json_file(filename)
+        except:
+            my_list = []
+        my_list.extend(args[1:])
+        save_to_json_file(my_list, filename)
