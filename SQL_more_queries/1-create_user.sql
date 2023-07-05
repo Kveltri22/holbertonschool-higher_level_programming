@@ -1,8 +1,6 @@
--- Create the user if it does not exist
+-- Creates a MySQL Server user `user_0d_1`
+-- and sets a temporary password `user_0d_1_pwd`.
+DROP USER IF EXISTS 'user_0d_1'@'localhost';
 CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
-
--- Grant all privileges to the user
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@localhost' WITH GRANT OPTION;
-
--- Flush privileges to ensure changes take effect
+GRANT ALL PRIVILEGES ON * . * TO 'user_0d_1'@'localhost';
 FLUSH PRIVILEGES;
