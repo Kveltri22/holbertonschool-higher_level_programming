@@ -3,7 +3,7 @@
 # Usage: ./7-model_state_fetch_all.py <mysql username> /
 #                                     <mysql password> /
 #                                     <database name>
-""" MOD DOC """
+""" Module Documentation """
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
