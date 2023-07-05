@@ -1,3 +1,3 @@
--- This is not a comment
-SELECT * FROM mysql.user WHERE user = 'user_0d_1';
-SELECT * FROM mysql.user WHERE user = 'user_0d_2';
+-- SQL lists all privileges of the MySQL users user_0d_1 and user_0d_2 on your server (in localhost).
+SHOW GRANTS FOR 'user_0d_1'@'localhost';
+SHOW GRANTS FOR 'user_0d_2'@'localhost';
